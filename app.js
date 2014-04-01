@@ -24,11 +24,6 @@ app.set('port', process.env.PORT || 8000);
 app.use("/", express.static(path.join(__dirname, "public")));
 app.use(app.router);
 
-//app.get("/", function (req, res) {
-//    res.set("Content-Type", "text/html; charset=\"utf-8\"");
-//    res.send(page);
-//});
-
 // here, the createServer method is called using the options object (see above)
 // as the first argument.
 https.createServer(options, app).listen(app.get('port'), function () {
