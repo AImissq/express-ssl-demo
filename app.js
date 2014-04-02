@@ -18,14 +18,12 @@ var express = require('express'),
             './ssl/certs/signed/-signed-cert.pem'))
     };
 
-app.set('port', process.env.PORT || 8000);
-
 // ALL MIDDLEWARES STRIPPED FOR BREVITY.
 app.use("/", express.static(path.join(__dirname, "public")));
 app.use(app.router);
 
 // here, the createServer method is called using the options object (see above)
-// as the first argument.
-https.createServer(options, app).listen(app.get('port'), function () {
-    console.log('Express server listening on port ' + app.get('port'));
+// as the first argument. The port is hardcoded for brevity.
+https.createServer(options, app).listen(8000, function () {
+    console.log('Express server listening on port 8000');
 });
