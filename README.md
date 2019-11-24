@@ -11,3 +11,7 @@ function and presto, it's done (in theory).
 
 To run this after cloning it, you need to run `npm install`, which will pull
 just express.
+
+note by AImissq
+----------------
+Although read only this project still functions, SSL works with minimum code. Good example/demo
